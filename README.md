@@ -40,15 +40,9 @@ This module creates a custom directive (tag) that you can use anywhere in your t
 * size - This is optional. Since the icon is always a square, you only need to provide a single value. If the `size` attribute is not present, the default is a 64px square.
 
 ~~~html
-<div class="cool-weather-data">
-    <skycon icon="sleet" color="blue" size="100"></skycon>
-</div>
+<skycon icon="sleet" color="blue" size="100"></skycon>
 
-<div class="cool-weather-data">
-    <skycon icon="snow" color="pink"></skycon>
-</div>
+<skycon icon="snow" color="pink"></skycon>
 
-<div class="cool-weather-data">
-    <skycon icon="clear-day"></skycon>
-</div>
+<skycon icon="clear-day"></skycon>
 ~~~
