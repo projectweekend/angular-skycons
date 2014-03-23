@@ -8,7 +8,7 @@ This is an AngularJS module that makes it super easy to add [Forecast.io](http:/
 ### Step 1
 Copy the `skycons.js` file from [darkskyapp/skycons](https://github.com/darkskyapp/skycons) and the `angular-skycons.js` file from this repository into your project.
 
-![Screenshot of files in project folder]()
+![Screenshot of files in project folder](https://github.com/projectweekend/angular-skycons/blob/master/screenshots/copy-files-into-project.png)
 
 
 * 
