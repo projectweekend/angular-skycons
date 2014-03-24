@@ -4,6 +4,9 @@ var angularSkycons = angular.module( 'angular-skycons', [] );
 angularSkycons.directive( 'skycon', function () {
     return {
         restrict: 'E',
+        scope: {
+            icon: "="
+        },
         link: function ( scope, element, attrs ) {
 
             // make a canvas for our icon
@@ -27,7 +30,9 @@ angularSkycons.directive( 'skycon', function () {
             }
 
             var skycons = new Skycons(config);
-            skycons.add( canvas, attrs.icon );
+            scope.$watch("icon", function () {
+                skycons.add( canvas, scope.icon );
+            }, true);
             skycons.play();
 
             if (element[0].nodeType === 8) {
