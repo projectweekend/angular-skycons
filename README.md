@@ -1,6 +1,7 @@
 This is an [AngularJS](http://angularjs.org/) module that makes it super easy to add [Forecast.io](http://forecast.io/) skycons to your app. [Skycons](http://darkskyapp.github.io/skycons/) is an open-source set of animated weather glyphs that uses JavaScript and the HTML5 canvas element.
 
 ![Example Skycons](https://raw.githubusercontent.com/projectweekend/angular-skycons/master/screenshots/example-skycons.png)
+Note: my crappy screen shot image is not animated ;) 
 
 ## Install it
 If you're familar with how to include third-party modules in AngularJS, then you can probably skip this section. If you're new to the framework, this should help.
