@@ -34,7 +34,7 @@ var app = angular.module('myApp', [
 ## Use it
 This module creates a custom directive (tag) that you can use anywhere in your templates. This directive accepts three attributes:
 
-* icon - This one is **required** since it defines which icon you want to display. Unlike the other two properties, this one must be bound to a property of a controller. The accepted values for this attribute correspond to the values returned in the `icon` property of data point objects in the [Forecast.io API](https://developer.forecast.io/docs/v2). The possible options are: `clear-day`, `clear-night`, `rain`, `snow`, `sleet`, `wind`, `fog`, `cloudy`, `partly-cloudy-day`, or `partly-cloudy-night`.
+* icon - This one is **required** since it defines which icon you want to display. Unlike the other two attributes, this one must be bound to a property of a controller. The accepted values for this attribute correspond to the values returned in the `icon` property of data point objects in the [Forecast.io API](https://developer.forecast.io/docs/v2). The possible options are: `clear-day`, `clear-night`, `rain`, `snow`, `sleet`, `wind`, `fog`, `cloudy`, `partly-cloudy-day`, or `partly-cloudy-night`.
 * color - This is optional. If the `color` attribute is not present, the default is `black`.
 * size - This is optional. Since the icon is always a square, you only need to provide a single value. If the `size` attribute is not present, the default is a 64px square.
 
