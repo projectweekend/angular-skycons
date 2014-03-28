@@ -12,6 +12,13 @@ angularSkycons.directive( 'skycon', function () {
             // make a canvas for our icon
             var canvas = document.createElement( 'canvas' );
 
+            // set the CSS class from attribute
+            if ( !attrs.class ) {
+                canvas.className = "";
+            } else {
+                canvas.className = attrs.class;
+            }
+
             // set default size if "size" attribute not present
             if ( !attrs.size ) {
                 canvas.height = 64;
