@@ -7,15 +7,15 @@
     "Brian Hines <brian@projectweekend.net>"
   ],
   "description": "An AngularJS directive for Forecast.io animated skycons",
-  "keywords": [
-    "angularjs",
-    "skycons",
-    "forecast.io",
-    "weather"
+  "moduleType": [
+    "globals"
   ],
-  "dependencies": {
-    "skycons": "https://github.com/karlosgliberal/skycons"
-  },
+  "keywords": [
+    "weather",
+    "forecast.io",
+    "skycons",
+    "angularjs"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
@@ -23,5 +23,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "skycons": "*"
+  }
 }
