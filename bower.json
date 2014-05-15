@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "skycons": "https://github.com/darkskyapp/skycons"
-  }
+  },
   "license": "MIT",
   "ignore": [
     "**/.*",
