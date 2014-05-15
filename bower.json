@@ -14,7 +14,7 @@
     "weather"
   ],
   "dependencies": {
-    "skycons": "https://github.com/darkskyapp/skycons"
+    "skycons": "https://github.com/karlosgliberal/skycons"
   },
   "license": "MIT",
   "ignore": [
