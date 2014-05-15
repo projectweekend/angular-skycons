@@ -4,7 +4,7 @@ This is an [AngularJS](http://angularjs.org/) module that makes it super easy to
 Note: my crappy screen shot image is not animated ;)
 
 ## Installation
-This project, along with all of its dependencies are installed with [Bower](http://bower.io/). Go into the directory where you want (or have) `/bower_components` components, then: `bower install angular-skycons`.
+This project, along with all of its dependencies are installed with [Bower](http://bower.io/): `bower install angular-skycons`.
 
 ## Set up
 If you're familar with how to include third-party modules in AngularJS, then you can probably skip this section. If you're new to the framework, this should help.
