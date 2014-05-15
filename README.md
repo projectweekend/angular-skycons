@@ -1,26 +1,25 @@
 This is an [AngularJS](http://angularjs.org/) module that makes it super easy to add [Forecast.io](http://forecast.io/) skycons to your app. [Skycons](http://darkskyapp.github.io/skycons/) is an open-source set of animated weather glyphs that uses JavaScript and the HTML5 canvas element.
 
 ![Example Skycons](https://raw.githubusercontent.com/projectweekend/angular-skycons/master/screenshots/example-skycons.png)
-Note: my crappy screen shot image is not animated ;) 
+Note: my crappy screen shot image is not animated ;)
 
-## Install it
+## Installation
+This project, along with all of its dependencies are installed with [Bower](http://bower.io/). Go into the directory where you want (or have) `/bower_components` components, then: `bower install angular-skycons`.
+
+## Set up
 If you're familar with how to include third-party modules in AngularJS, then you can probably skip this section. If you're new to the framework, this should help.
 
 ### Step 1
-Copy the `skycons.js` file from [darkskyapp/skycons](https://github.com/darkskyapp/skycons) and the `angular-skycons.js` file from this repository into your project. In this example, I'm using the directory '/js/lib' for the location. My main AngularJS app in this case is in `/js`.
-
-![Screenshot of files in project folder](https://raw.githubusercontent.com/projectweekend/angular-skycons/master/screenshots/copy-files-into-project.png)
-
-### Step 2
-Include both of these files before the main app file:
+Include the following files before the main app file:
 
 ~~~html
-<script src="/js/lib/skycons.js"></script>
-<script src="/js/lib/angular-skycons.js"></script>
+<script src="/bower_components/jquery/jquery.min.js"></script>
+<script src="/bower_components/skycons/skycons.js"></script>
+<script src="/bower_components/angular-skycons/angular-skycons.js"></script>
 <script src="/js/app.js"></script>
 ~~~
 
-### Step 3
+### Step 2
 Add `angular-skycons` to the app requirements (`/js/app.js`).
 ~~~javascript
 var app = angular.module('myApp', [
