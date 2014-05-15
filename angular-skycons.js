@@ -4,6 +4,7 @@ var angularSkycons = angular.module( 'angular-skycons', [] );
 angularSkycons.directive( 'skycon', function () {
     return {
         restrict: 'E',
+        replace: true,
         scope: {
             icon: "="
         },

@@ -1,0 +1,27 @@
+{
+  "name": "angular-skycons",
+  "main": "angular-skycons.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/projectweekend/angular-skycons",
+  "authors": [
+    "Brian Hines <brian@projectweekend.net>"
+  ],
+  "description": "An AngularJS directive for Forecast.io animated skycons",
+  "keywords": [
+    "angularjs",
+    "skycons",
+    "forecast.io",
+    "weather"
+  ],
+  "dependencies": {
+    "skycons": "https://github.com/darkskyapp/skycons"
+  }
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
