@@ -1,7 +1,7 @@
 {
   "name": "angular-skycons",
   "main": "angular-skycons.js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "homepage": "https://github.com/projectweekend/angular-skycons",
   "authors": [
     "Brian Hines <brian@projectweekend.net>"
@@ -25,7 +25,6 @@
     "tests"
   ],
   "dependencies": {
-    "skycons": "darkskyapp/skycons",
-    "jquery": "~2.0.3"
+    "skycons": "darkskyapp/skycons"
   }
 }

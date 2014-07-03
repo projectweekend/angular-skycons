@@ -13,7 +13,6 @@ If you're familar with how to include third-party modules in AngularJS, then you
 Include the following files before the main app file:
 
 ~~~html
-<script src="/bower_components/jquery/jquery.min.js"></script>
 <script src="/bower_components/skycons/skycons.js"></script>
 <script src="/bower_components/angular-skycons/angular-skycons.js"></script>
 <script src="/js/app.js"></script>
