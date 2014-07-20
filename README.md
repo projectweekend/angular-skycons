@@ -34,8 +34,8 @@ var app = angular.module('myApp', [
 This module creates a custom directive (tag) that you can use anywhere in your templates. This directive has four attributes:
 
 * **icon** - This one is **required** since it defines which icon you want to display. Unlike the other two attributes, this one must be bound to a property of a controller. The accepted values for this attribute correspond to the values returned in the `icon` property of data point objects in the [Forecast.io API](https://developer.forecast.io/docs/v2). The possible options are: `clear-day`, `clear-night`, `rain`, `snow`, `sleet`, `wind`, `fog`, `cloudy`, `partly-cloudy-day`, or `partly-cloudy-night`.
+* **size** - This is optional, but must be bound to a property of a controller. Having this value come from the controller means that you can set it dynamically based on things like `$window.innerWidth`, etc. Since the icon is always a square, you only need to provide a single value. If the `size` attribute is not present, the default is a 64px square.
 * **color** - This is optional. If the `color` attribute is not present, the default is `black`.
-* **size** - This is optional. Since the icon is always a square, you only need to provide a single value. If the `size` attribute is not present, the default is a 64px square.
 * **class** - Use this to set the CSS class if needed.
 
 #### Controller Example
@@ -53,6 +53,7 @@ cMod.controller( 'WeatherCtrl', function ( $scope ) {
 	$scope.CurrentWeather = {
         forecast: {
             icon: "partly-cloudy-night",
+            size: 100,
             ...
         }
     };
@@ -62,7 +63,7 @@ cMod.controller( 'WeatherCtrl', function ( $scope ) {
 
 #### Template Example
 ~~~html
-<skycon icon="CurrentWeather.forecast.icon" color="blue" size="100"></skycon>
+<skycon icon="CurrentWeather.forecast.icon" color="blue" size="CurrentWeather.forecast.size"></skycon>
 
 <skycon icon="CurrentWeather.forecast.icon" color="pink"></skycon>
 
