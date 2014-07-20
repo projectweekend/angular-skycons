@@ -6,7 +6,8 @@ angularSkycons.directive( 'skycon', function () {
         restrict: 'E',
         replace: true,
         scope: {
-            icon: "="
+            icon: "=",
+            size: "="
         },
         link: function ( scope, element, attrs ) {
 
@@ -20,15 +21,6 @@ angularSkycons.directive( 'skycon', function () {
                 canvas.className = attrs.class;
             }
 
-            // set default size if "size" attribute not present
-            if ( !attrs.size ) {
-                canvas.height = 64;
-                canvas.width = 64;
-            } else {
-                canvas.height = attrs.size;
-                canvas.width = attrs.size;
-            }
-
             // set default color if "color" attribute not present
             var config = {};
             if ( !attrs.color ) {
@@ -37,13 +29,27 @@ angularSkycons.directive( 'skycon', function () {
                 config.color = attrs.color;
             }
 
-            var skycons = new Skycons(config);
-            scope.$watch("icon", function () {
+            var skycons = new Skycons( config );
+
+            // watch the size property from the controller
+            scope.$watch( "size", function ( newVal, oldVal ) {
+                if ( newVal ) {
+                    canvas.height = newVal;
+                    canvas.width = newVal;
+                } else {
+                    canvas.height = scope.size || 64;
+                    canvas.width = scope.size  || 64;
+                }
+            }, true );
+
+            // watch the icon property from the controller
+            scope.$watch( "icon", function () {
                 skycons.add( canvas, scope.icon );
-            }, true);
+            }, true );
+
             skycons.play();
 
-            if (element[0].nodeType === 8) {
+            if ( element[0].nodeType === 8 ) {
                 element.replaceWith( canvas );
             } else {
                 element[0].appendChild( canvas );
