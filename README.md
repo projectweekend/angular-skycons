@@ -53,7 +53,7 @@ cMod.controller( 'WeatherCtrl', function ( $scope ) {
 	$scope.CurrentWeather = {
         forecast: {
             icon: "partly-cloudy-night",
-            size: 100,
+            iconSize: 100,
             ...
         }
     };
@@ -63,7 +63,7 @@ cMod.controller( 'WeatherCtrl', function ( $scope ) {
 
 #### Template Example
 ~~~html
-<skycon icon="CurrentWeather.forecast.icon" color="blue" size="CurrentWeather.forecast.size"></skycon>
+<skycon icon="CurrentWeather.forecast.icon" color="blue" size="CurrentWeather.forecast.iconSize"></skycon>
 
 <skycon icon="CurrentWeather.forecast.icon" color="pink"></skycon>
 
