@@ -54,6 +54,13 @@ angularSkycons.directive( 'skycon', function () {
             } else {
                 element[0].appendChild( canvas );
             }
+            
+            scope.$on('$destroy', function () {
+                skycons.remove(canvas);
+                if (skycons.list.length === 0) {
+                    skycons.pause(canvas);
+                }
+            });
         }
     };
 } );
