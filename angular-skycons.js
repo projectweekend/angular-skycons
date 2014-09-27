@@ -42,9 +42,12 @@ angularSkycons.directive( 'skycon', function () {
                 }
             }, true );
 
-            // watch the icon property from the controller
+            // add the animation
+            skycons.add( canvas, scope.icon );
+
+            // watch the icon property from the controller for changes
             scope.$watch( "icon", function () {
-                skycons.add( canvas, scope.icon );
+                skycons.set( canvas, scope.icon );
             }, true );
 
             skycons.play();
@@ -54,7 +57,7 @@ angularSkycons.directive( 'skycon', function () {
             } else {
                 element[0].appendChild( canvas );
             }
-            
+
             scope.$on('$destroy', function () {
                 skycons.remove(canvas);
                 if (skycons.list.length === 0) {
