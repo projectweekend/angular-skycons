@@ -7,7 +7,8 @@ angularSkycons.directive( 'skycon', function () {
         replace: true,
         scope: {
             icon: "=",
-            size: "="
+            size: "=",
+            animated: "="
         },
         link: function ( scope, element, attrs ) {
 
@@ -50,7 +51,12 @@ angularSkycons.directive( 'skycon', function () {
                 skycons.set( canvas, scope.icon );
             }, true );
 
-            skycons.play();
+            if (scope.animated === "false" || scope.animated === false) {
+                skycons.pause();
+            }
+            else {
+                skycons.play();
+            }
 
             if ( element[0].nodeType === 8 ) {
                 element.replaceWith( canvas );
