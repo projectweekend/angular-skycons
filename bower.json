@@ -1,7 +1,7 @@
 {
   "name": "angular-skycons",
   "main": "angular-skycons.js",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "homepage": "https://github.com/projectweekend/angular-skycons",
   "authors": [
     "Brian Hines <brian@projectweekend.net>"
