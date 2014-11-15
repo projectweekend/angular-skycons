@@ -18,6 +18,14 @@ Include the following files before the main app file:
 <script src="/js/app.js"></script>
 ~~~
 
+Or use the minified version. As a convenience, this version has the `skycons.js` dependency included so you only need to include one file.
+
+~~~html
+<script src="/bower_components/angular-skycons/angular-skycons.min.js"></script>
+<script src="/js/app.js"></script>
+~~~
+
+
 ### Step 2
 Add `angular-skycons` to the app requirements (`/js/app.js`).
 ~~~javascript
