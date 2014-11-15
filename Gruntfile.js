@@ -15,16 +15,28 @@ module.exports = function ( grunt ) {
             },
             project: {
                 files: {
-                    "angular-skycons.min.js": [ "angular-skycons.js" ]
+                    "angular-skycons.min.js": [
+                        "tmp/angular-skycons.concat.js"
+                    ]
                 }
             }
+        },
+        concat: {
+            scripts: {
+                src: [
+                    "bower_components/skycons/skycons.js",
+                    "angular-skycons.js"
+                ],
+                dest: "tmp/angular-skycons.concat.js"
+            },
         }
 
     } );
 
     grunt.loadNpmTasks( "grunt-contrib-watch" );
     grunt.loadNpmTasks( "grunt-contrib-uglify" );
+    grunt.loadNpmTasks( "grunt-contrib-concat" );
 
-    grunt.registerTask( "default", [ "uglify" ] );
+    grunt.registerTask( "default", [ "concat", "uglify" ] );
 
 };
