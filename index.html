@@ -21,7 +21,7 @@
       <div class="inner">
         <h1>Angular-skycons</h1>
         <h2>An AngularJS directive for Forecast.io animated skycons</h2>
-        <a href="https://github.com/projectweekend/angular-skycons" class="button"><small>View project on</small>GitHub</a>
+        <a href="https://github.com/projectweekend/angular-skycons" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
 
@@ -34,86 +34,91 @@
 Note: my crappy screen shot image is not animated ;)</p>
 
 <h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>This project, along with all of its dependencies are installed with <a href="http://bower.io/">Bower</a>: <code>bower install angular-skycons</code>.</p>
 
 <h2>
-<a name="set-up" class="anchor" href="#set-up"><span class="octicon octicon-link"></span></a>Set up</h2>
+<a id="set-up" class="anchor" href="#set-up" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set up</h2>
 
 <p>If you're familar with how to include third-party modules in AngularJS, then you can probably skip this section. If you're new to the framework, this should help.</p>
 
 <h3>
-<a name="step-1" class="anchor" href="#step-1"><span class="octicon octicon-link"></span></a>Step 1</h3>
+<a id="step-1" class="anchor" href="#step-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 1</h3>
 
 <p>Include the following files before the main app file:</p>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/bower_components/skycons/skycons.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/bower_components/angular-skycons/angular-skycons.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/js/app.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
-</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/bower_components/skycons/skycons.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/bower_components/angular-skycons/angular-skycons.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/js/app.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Or use the minified version. As a convenience, this version has the <code>skycons.js</code> dependency included so you only need to include one file.</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/bower_components/angular-skycons/angular-skycons.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/js/app.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
 <h3>
-<a name="step-2" class="anchor" href="#step-2"><span class="octicon octicon-link"></span></a>Step 2</h3>
+<a id="step-2" class="anchor" href="#step-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2</h3>
 
 <p>Add <code>angular-skycons</code> to the app requirements (<code>/js/app.js</code>).</p>
 
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">'myApp'</span><span class="p">,</span> <span class="p">[</span>
-    <span class="s1">'myApp.controllers'</span><span class="p">,</span>
-    <span class="s1">'myApp.filters'</span><span class="p">,</span>
-    <span class="s1">'myApp.services'</span><span class="p">,</span>
-    <span class="c1">// 3rd party dependencies</span>
-    <span class="s1">'angular-skycons'</span>
-<span class="p">]);</span>
-</pre></div>
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> app <span class="pl-ko">=</span> angular.module(<span class="pl-s1"><span class="pl-pds">'</span>myApp<span class="pl-pds">'</span></span>, [
+    <span class="pl-s1"><span class="pl-pds">'</span>myApp.controllers<span class="pl-pds">'</span></span>,
+    <span class="pl-s1"><span class="pl-pds">'</span>myApp.filters<span class="pl-pds">'</span></span>,
+    <span class="pl-s1"><span class="pl-pds">'</span>myApp.services<span class="pl-pds">'</span></span>,
+    <span class="pl-c"><span class="pl-pdc">//</span> 3rd party dependencies</span>
+    <span class="pl-s1"><span class="pl-pds">'</span>angular-skycons<span class="pl-pds">'</span></span>
+]);</pre></div>
 
 <h2>
-<a name="use-it" class="anchor" href="#use-it"><span class="octicon octicon-link"></span></a>Use it</h2>
+<a id="use-it" class="anchor" href="#use-it" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use it</h2>
 
 <p>This module creates a custom directive (tag) that you can use anywhere in your templates. This directive has four attributes:</p>
 
 <ul>
 <li>
-<strong>icon</strong> - This one is <strong>required</strong> since it defines which icon you want to display. Unlike the other two attributes, this one must be bound to a property of a controller. The accepted values for this attribute correspond to the values returned in the <code>icon</code> property of data point objects in the <a href="https://developer.forecast.io/docs/v2">Forecast.io API</a>. The possible options are: <code>clear-day</code>, <code>clear-night</code>, <code>rain</code>, <code>snow</code>, <code>sleet</code>, <code>wind</code>, <code>fog</code>, <code>cloudy</code>, <code>partly-cloudy-day</code>, or <code>partly-cloudy-night</code>.</li>
+<strong>icon</strong> - This one is <strong>required</strong> since it defines which icon you want to display. It also must be bound to a property of a controller. The accepted values for this attribute correspond to the values returned in the <code>icon</code> property of data point objects in the <a href="https://developer.forecast.io/docs/v2">Forecast.io API</a>. The possible options are: <code>clear-day</code>, <code>clear-night</code>, <code>rain</code>, <code>snow</code>, <code>sleet</code>, <code>wind</code>, <code>fog</code>, <code>cloudy</code>, <code>partly-cloudy-day</code>, or <code>partly-cloudy-night</code>.</li>
 <li>
 <strong>size</strong> - This is optional, but must be bound to a property of a controller. Having this value come from the controller means that you can set it dynamically based on things like <code>$window.innerWidth</code>, etc. Since the icon is always a square, you only need to provide a single value. If the <code>size</code> attribute is not present, the default is a 64px square.</li>
+<li>
+<strong>animated</strong> - This is optional, but must be bound to a property of a controller. Setting the value to <code>false</code> or the string <code>"false"</code> will stop animation of the icon.</li>
 <li>
 <strong>color</strong> - This is optional. If the <code>color</code> attribute is not present, the default is <code>black</code>.</li>
 <li>
 <strong>class</strong> - Use this to set the CSS class if needed.</li>
-</ul><h4>
-<a name="controller-example" class="anchor" href="#controller-example"><span class="octicon octicon-link"></span></a>Controller Example</h4>
-
-<div class="highlight highlight-javascript"><pre><span class="kd">var</span> <span class="nx">cMod</span> <span class="o">=</span> <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span> <span class="s1">'myApp.controllers'</span><span class="p">,</span> <span class="p">[]</span> <span class="p">);</span>
-
-<span class="nx">cMod</span><span class="p">.</span><span class="nx">controller</span><span class="p">(</span> <span class="s1">'WeatherCtrl'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span> <span class="nx">$scope</span> <span class="p">)</span> <span class="p">{</span>
-
-    <span class="cm">/*</span>
-<span class="cm">        This example is over simplified to demonstrate the relationship</span>
-<span class="cm">        between the 'controller' and the 'template' with regard to loading</span>
-<span class="cm">        the 'icon' value. Hopefully, you will be loading your controller with</span>
-<span class="cm">        data from an actual API response. :)</span>
-<span class="cm">    */</span>
-    <span class="nx">$scope</span><span class="p">.</span><span class="nx">CurrentWeather</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="nx">forecast</span><span class="o">:</span> <span class="p">{</span>
-            <span class="nx">icon</span><span class="o">:</span> <span class="s2">"partly-cloudy-night"</span><span class="p">,</span>
-            <span class="nx">iconSize</span><span class="o">:</span> <span class="mi">100</span><span class="p">,</span>
-            <span class="p">...</span>
-        <span class="p">}</span>
-    <span class="p">};</span>
-
-<span class="p">}</span> <span class="p">);</span>
-</pre></div>
+</ul>
 
 <h4>
-<a name="template-example" class="anchor" href="#template-example"><span class="octicon octicon-link"></span></a>Template Example</h4>
+<a id="controller-example" class="anchor" href="#controller-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Controller Example</h4>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;skycon</span> <span class="na">icon=</span><span class="s">"CurrentWeather.forecast.icon"</span> <span class="na">color=</span><span class="s">"blue"</span> <span class="na">size=</span><span class="s">"CurrentWeather.forecast.iconSize"</span><span class="nt">&gt;&lt;/skycon&gt;</span>
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> cMod <span class="pl-ko">=</span> angular.module( <span class="pl-s1"><span class="pl-pds">'</span>myApp.controllers<span class="pl-pds">'</span></span>, [] );
 
-<span class="nt">&lt;skycon</span> <span class="na">icon=</span><span class="s">"CurrentWeather.forecast.icon"</span> <span class="na">color=</span><span class="s">"pink"</span><span class="nt">&gt;&lt;/skycon&gt;</span>
+cMod.controller( <span class="pl-s1"><span class="pl-pds">'</span>WeatherCtrl<span class="pl-pds">'</span></span>, <span class="pl-s">function</span> ( <span class="pl-vpf">$scope</span> ) {
 
-<span class="nt">&lt;skycon</span> <span class="na">icon=</span><span class="s">"CurrentWeather.forecast.icon"</span><span class="nt">&gt;&lt;/skycon&gt;</span>
-</pre></div>
+    <span class="pl-c"><span class="pl-pdc">/*</span></span>
+<span class="pl-c">        This example is over simplified to demonstrate the relationship</span>
+<span class="pl-c">        between the 'controller' and the 'template' with regard to loading</span>
+<span class="pl-c">        the 'icon' value. Hopefully, you will be loading your controller with</span>
+<span class="pl-c">        data from an actual API response. :)</span>
+<span class="pl-c">    <span class="pl-pdc">*/</span></span>
+    $scope.CurrentWeather <span class="pl-ko">=</span> {
+        forecast<span class="pl-ko">:</span> {
+            icon<span class="pl-ko">:</span> <span class="pl-s1"><span class="pl-pds">"</span>partly-cloudy-night<span class="pl-pds">"</span></span>,
+            iconSize<span class="pl-ko">:</span> <span class="pl-cn">100</span>,
+            ...
+        }
+    };
+
+} );</pre></div>
+
+<h4>
+<a id="template-example" class="anchor" href="#template-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Template Example</h4>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">skycon</span> <span class="pl-eoa">icon</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.icon<span class="pl-pds">"</span></span> <span class="pl-eoa">color</span>=<span class="pl-s1"><span class="pl-pds">"</span>blue<span class="pl-pds">"</span></span> <span class="pl-eoa">size</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.iconSize<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">skycon</span>&gt;
+
+&lt;<span class="pl-ent">skycon</span> <span class="pl-eoa">icon</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.icon<span class="pl-pds">"</span></span> <span class="pl-eoa">color</span>=<span class="pl-s1"><span class="pl-pds">"</span>pink<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">skycon</span>&gt;
+
+&lt;<span class="pl-ent">skycon</span> <span class="pl-eoa">icon</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.icon<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">skycon</span>&gt;</pre></div>
         </section>
 
         <aside id="sidebar">
