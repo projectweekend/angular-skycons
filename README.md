@@ -44,7 +44,7 @@ This module creates a custom directive (tag) that you can use anywhere in your t
 * **icon** - This one is **required** since it defines which icon you want to display. It also must be bound to a property of a controller. The accepted values for this attribute correspond to the values returned in the `icon` property of data point objects in the [Forecast.io API](https://developer.forecast.io/docs/v2). The possible options are: `clear-day`, `clear-night`, `rain`, `snow`, `sleet`, `wind`, `fog`, `cloudy`, `partly-cloudy-day`, or `partly-cloudy-night`.
 * **size** - This is optional, but must be bound to a property of a controller. Having this value come from the controller means that you can set it dynamically based on things like `$window.innerWidth`, etc. Since the icon is always a square, you only need to provide a single value. If the `size` attribute is not present, the default is a 64px square.
 * **animated** - This is optional, but must be bound to a property of a controller. Setting the value to `false` or the string `"false"` will stop animation of the icon.
-* **color** - This is optional. If the `color` attribute is not present, the default is `black`.
+* **color** - This is optional, but must be bound to a property of a controller. If it is not present, the default is `black`.
 * **class** - Use this to set the CSS class if needed.
 
 #### Controller Example
@@ -63,6 +63,7 @@ cMod.controller( 'WeatherCtrl', function ( $scope ) {
         forecast: {
             icon: "partly-cloudy-night",
             iconSize: 100,
+            color: "blue",
             ...
         }
     };
@@ -72,9 +73,9 @@ cMod.controller( 'WeatherCtrl', function ( $scope ) {
 
 #### Template Example
 ~~~html
-<skycon icon="CurrentWeather.forecast.icon" color="blue" size="CurrentWeather.forecast.iconSize"></skycon>
+<skycon icon="CurrentWeather.forecast.icon" size="CurrentWeather.forecast.iconSize"></skycon>
 
-<skycon icon="CurrentWeather.forecast.icon" color="pink"></skycon>
+<skycon icon="CurrentWeather.forecast.icon"></skycon>
 
 <skycon icon="CurrentWeather.forecast.icon"></skycon>
 ~~~
