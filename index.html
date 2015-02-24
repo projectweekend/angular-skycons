@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <meta name="description" content="Angular-skycons : An AngularJS directive for Forecast.io animated skycons">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Angular-skycons by projectweekend</title>
+    <title>Angular-skycons</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Angular-skycons</h1>
-        <h2>An AngularJS directive for Forecast.io animated skycons</h2>
-        <a href="https://github.com/projectweekend/angular-skycons" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <p>This is an <a href="http://angularjs.org/">AngularJS</a> module that makes it super easy to add <a href="http://forecast.io/">Forecast.io</a> skycons to your app. <a href="http://darkskyapp.github.io/skycons/">Skycons</a> is an open-source set of animated weather glyphs that uses JavaScript and the HTML5 canvas element.</p>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/projectweekend/angular-skycons">View on GitHub</a>
+
+          <h1 id="project_title">Angular-skycons</h1>
+          <h2 id="project_tagline">An AngularJS directive for Forecast.io animated skycons</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/projectweekend/angular-skycons/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/projectweekend/angular-skycons/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>This is an <a href="http://angularjs.org/">AngularJS</a> module that makes it super easy to add <a href="http://forecast.io/">Forecast.io</a> skycons to your app. <a href="http://darkskyapp.github.io/skycons/">Skycons</a> is an open-source set of animated weather glyphs that uses JavaScript and the HTML5 canvas element.</p>
 
 <p><img src="https://raw.githubusercontent.com/projectweekend/angular-skycons/master/screenshots/example-skycons.png" alt="Example Skycons">
 Note: my crappy screen shot image is not animated ;)</p>
@@ -48,25 +51,25 @@ Note: my crappy screen shot image is not animated ;)</p>
 
 <p>Include the following files before the main app file:</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/bower_components/skycons/skycons.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/bower_components/angular-skycons/angular-skycons.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/js/app.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/bower_components/skycons/skycons.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/bower_components/angular-skycons/angular-skycons.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/js/app.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
 <p>Or use the minified version. As a convenience, this version has the <code>skycons.js</code> dependency included so you only need to include one file.</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/bower_components/angular-skycons/angular-skycons.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-eoa">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/js/app.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/bower_components/angular-skycons/angular-skycons.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>/js/app.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
 
 <h3>
 <a id="step-2" class="anchor" href="#step-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step 2</h3>
 
 <p>Add <code>angular-skycons</code> to the app requirements (<code>/js/app.js</code>).</p>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> app <span class="pl-ko">=</span> angular.module(<span class="pl-s1"><span class="pl-pds">'</span>myApp<span class="pl-pds">'</span></span>, [
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> app <span class="pl-k">=</span> angular.module(<span class="pl-s1"><span class="pl-pds">'</span>myApp<span class="pl-pds">'</span></span>, [
     <span class="pl-s1"><span class="pl-pds">'</span>myApp.controllers<span class="pl-pds">'</span></span>,
     <span class="pl-s1"><span class="pl-pds">'</span>myApp.filters<span class="pl-pds">'</span></span>,
     <span class="pl-s1"><span class="pl-pds">'</span>myApp.services<span class="pl-pds">'</span></span>,
-    <span class="pl-c"><span class="pl-pdc">//</span> 3rd party dependencies</span>
+    <span class="pl-c">// 3rd party dependencies</span>
     <span class="pl-s1"><span class="pl-pds">'</span>angular-skycons<span class="pl-pds">'</span></span>
 ]);</pre></div>
 
@@ -83,7 +86,7 @@ Note: my crappy screen shot image is not animated ;)</p>
 <li>
 <strong>animated</strong> - This is optional, but must be bound to a property of a controller. Setting the value to <code>false</code> or the string <code>"false"</code> will stop animation of the icon.</li>
 <li>
-<strong>color</strong> - This is optional. If the <code>color</code> attribute is not present, the default is <code>black</code>.</li>
+<strong>color</strong> - This is optional, but must be bound to a property of a controller. If it is not present, the default is <code>black</code>.</li>
 <li>
 <strong>class</strong> - Use this to set the CSS class if needed.</li>
 </ul>
@@ -91,20 +94,21 @@ Note: my crappy screen shot image is not animated ;)</p>
 <h4>
 <a id="controller-example" class="anchor" href="#controller-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Controller Example</h4>
 
-<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> cMod <span class="pl-ko">=</span> angular.module( <span class="pl-s1"><span class="pl-pds">'</span>myApp.controllers<span class="pl-pds">'</span></span>, [] );
+<div class="highlight highlight-javascript"><pre><span class="pl-s">var</span> cMod <span class="pl-k">=</span> angular.module( <span class="pl-s1"><span class="pl-pds">'</span>myApp.controllers<span class="pl-pds">'</span></span>, [] );
 
-cMod.controller( <span class="pl-s1"><span class="pl-pds">'</span>WeatherCtrl<span class="pl-pds">'</span></span>, <span class="pl-s">function</span> ( <span class="pl-vpf">$scope</span> ) {
+cMod.controller( <span class="pl-s1"><span class="pl-pds">'</span>WeatherCtrl<span class="pl-pds">'</span></span>, <span class="pl-st">function</span> ( <span class="pl-vpf">$scope</span> ) {
 
-    <span class="pl-c"><span class="pl-pdc">/*</span></span>
+    <span class="pl-c">/*</span>
 <span class="pl-c">        This example is over simplified to demonstrate the relationship</span>
 <span class="pl-c">        between the 'controller' and the 'template' with regard to loading</span>
 <span class="pl-c">        the 'icon' value. Hopefully, you will be loading your controller with</span>
 <span class="pl-c">        data from an actual API response. :)</span>
-<span class="pl-c">    <span class="pl-pdc">*/</span></span>
-    $scope.CurrentWeather <span class="pl-ko">=</span> {
-        forecast<span class="pl-ko">:</span> {
-            icon<span class="pl-ko">:</span> <span class="pl-s1"><span class="pl-pds">"</span>partly-cloudy-night<span class="pl-pds">"</span></span>,
-            iconSize<span class="pl-ko">:</span> <span class="pl-cn">100</span>,
+<span class="pl-c">    */</span>
+    $scope.CurrentWeather <span class="pl-k">=</span> {
+        forecast<span class="pl-k">:</span> {
+            icon<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">"</span>partly-cloudy-night<span class="pl-pds">"</span></span>,
+            iconSize<span class="pl-k">:</span> <span class="pl-c1">100</span>,
+            color<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">"</span>blue<span class="pl-pds">"</span></span>,
             ...
         }
     };
@@ -114,30 +118,23 @@ cMod.controller( <span class="pl-s1"><span class="pl-pds">'</span>WeatherCtrl<sp
 <h4>
 <a id="template-example" class="anchor" href="#template-example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Template Example</h4>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">skycon</span> <span class="pl-eoa">icon</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.icon<span class="pl-pds">"</span></span> <span class="pl-eoa">color</span>=<span class="pl-s1"><span class="pl-pds">"</span>blue<span class="pl-pds">"</span></span> <span class="pl-eoa">size</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.iconSize<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">skycon</span>&gt;
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">skycon</span> <span class="pl-e">icon</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.icon<span class="pl-pds">"</span></span> <span class="pl-e">size</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.iconSize<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">skycon</span>&gt;
 
-&lt;<span class="pl-ent">skycon</span> <span class="pl-eoa">icon</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.icon<span class="pl-pds">"</span></span> <span class="pl-eoa">color</span>=<span class="pl-s1"><span class="pl-pds">"</span>pink<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">skycon</span>&gt;
+&lt;<span class="pl-ent">skycon</span> <span class="pl-e">icon</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.icon<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">skycon</span>&gt;
 
-&lt;<span class="pl-ent">skycon</span> <span class="pl-eoa">icon</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.icon<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">skycon</span>&gt;</pre></div>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/projectweekend/angular-skycons/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/projectweekend/angular-skycons/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/projectweekend/angular-skycons"></a> is maintained by <a href="https://github.com/projectweekend">projectweekend</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+&lt;<span class="pl-ent">skycon</span> <span class="pl-e">icon</span>=<span class="pl-s1"><span class="pl-pds">"</span>CurrentWeather.forecast.icon<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">skycon</span>&gt;</pre></div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Angular-skycons maintained by <a href="https://github.com/projectweekend">projectweekend</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
