@@ -49,6 +49,11 @@ angularSkycons.directive( "skycon", function () {
                 skycons.set( canvas, scope.icon );
             }, true );
 
+            // watch the color property from the controller for changes
+            scope.$watch( "color", function () {
+                skycons.color = scope.color;
+            }, true );
+
             if (scope.animated === "false" || scope.animated === false) {
                 skycons.pause();
             }
